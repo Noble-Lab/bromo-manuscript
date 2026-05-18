@@ -1,2 +1,2 @@
-Please see the following google drive link for access to model checkpoints:
-https://drive.google.com/drive/folders/1CTlnDOzukcakq5woGerp3uDiIGHrCMyq?usp=sharing
+Please see the following zenodo link for access to model checkpoints:
+https://zenodo.org/records/20262184
