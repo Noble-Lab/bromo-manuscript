@@ -1,0 +1,86 @@
+#! /bin/bash
+
+
+################################### Pretrain Bromo ###################################
+### Pretrain Bromo on Human-ASTRAL dataset
+python train.py train \
+    --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/human-astral \
+    --data_out_dir ../../Datasets/pretraining/human-astral \
+    --train_file ../../Datasets/preprocessing/assign_labels/human-astral/consensus_label_corrected.tsv \
+    --epochs 15 \
+    --batch-size 4096 \
+    --lr 0.0001 \
+    --max-len 30 \
+    --max-charge 4 \
+    --cpu 4 \
+    --weight-decay 1e-2
+
+
+################################### Run Inference on test sets ###################################
+
+##### HUMAN-ASTRAL test set ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/pretraining/human-astral/test.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/human-astral/testset_predictions.tsv \
+    --eval_path .
+
+
+##### YEAST-LUMOS entire dataset ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/preprocessing/assign_labels/yeast-lumos/consensus_label_corrected.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/yeast-lumos/full_predictions.tsv \
+    --eval_path .
+
+##### YEAST-EXPLORIS entire dataset ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/preprocessing/assign_labels/yeast-exploris/consensus_label_corrected.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/yeast-exploris/full_predictions.tsv \
+    --eval_path .
+
+##### YEAST-ASTRAL entire dataset ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/preprocessing/assign_labels/yeast-astral/consensus_label_corrected.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/yeast-astral/full_predictions.tsv \
+    --eval_path .
+
+##### HUMAN-EXPLORIS entire dataset ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/preprocessing/assign_labels/human-exploris/consensus_label_corrected.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/human-exploris/full_predictions.tsv \
+    --eval_path .
+
+
+##### HUMAN-LUMOS entire dataset ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/preprocessing/assign_labels/human-lumos/consensus_label_corrected.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/human-lumos/full_predictions.tsv \
+    --eval_path .
+
+
+##### HUMAN-PAN entire dataset ######
+python train.py predict \
+    --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
+    --test-file ../../Datasets/preprocessing/assign_labels/human-pan/consensus_label_corrected.tsv \
+    --max-len 30 \
+    --max-charge 4 \
+    --out-file ../../Datasets/inference/human-pan/full_predictions.tsv \
+    --eval_path .
+
