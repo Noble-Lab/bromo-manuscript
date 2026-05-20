@@ -1,9 +1,11 @@
 #! /bin/bash
 
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate bromo_env
 
 ################################### Pretrain Bromo ###################################
 ### Pretrain Bromo on Human-ASTRAL dataset
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/human-astral \
     --data_out_dir ../../Datasets/pretraining/human-astral \
     --train_file ../../Datasets/preprocessing/assign_labels/human-astral/consensus_label_corrected.tsv \
@@ -19,7 +21,7 @@ python train.py train \
 ################################### Run Inference on test sets ###################################
 
 ##### HUMAN-ASTRAL test set ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/pretraining/human-astral/test.tsv \
     --max-len 30 \
@@ -29,7 +31,7 @@ python train.py predict \
 
 
 ##### YEAST-LUMOS entire dataset ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/preprocessing/assign_labels/yeast-lumos/consensus_label_corrected.tsv \
     --max-len 30 \
@@ -38,7 +40,7 @@ python train.py predict \
     --eval_path .
 
 ##### YEAST-EXPLORIS entire dataset ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/preprocessing/assign_labels/yeast-exploris/consensus_label_corrected.tsv \
     --max-len 30 \
@@ -47,7 +49,7 @@ python train.py predict \
     --eval_path .
 
 ##### YEAST-ASTRAL entire dataset ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/preprocessing/assign_labels/yeast-astral/consensus_label_corrected.tsv \
     --max-len 30 \
@@ -56,7 +58,7 @@ python train.py predict \
     --eval_path .
 
 ##### HUMAN-EXPLORIS entire dataset ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/preprocessing/assign_labels/human-exploris/consensus_label_corrected.tsv \
     --max-len 30 \
@@ -66,7 +68,7 @@ python train.py predict \
 
 
 ##### HUMAN-LUMOS entire dataset ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/preprocessing/assign_labels/human-lumos/consensus_label_corrected.tsv \
     --max-len 30 \
@@ -76,7 +78,7 @@ python train.py predict \
 
 
 ##### HUMAN-PAN entire dataset ######
-python train.py predict \
+bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_full_step25700_best.pth \
     --test-file ../../Datasets/preprocessing/assign_labels/human-pan/consensus_label_corrected.tsv \
     --max-len 30 \

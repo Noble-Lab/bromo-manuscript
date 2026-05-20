@@ -1,9 +1,12 @@
 #!/bin/bash
 
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate bromo_env
+
 # ────────────────────────────────
 # HUMAN-ASTRAL
 # ────────────────────────────────
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/human-astral/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \
@@ -12,7 +15,7 @@ python -u assign_labels.py \
 # ────────────────────────────────
 # YEAST-ASTRAL
 # ────────────────────────────────
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/yeast-astral/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \
@@ -21,7 +24,7 @@ python -u assign_labels.py \
 # ────────────────────────────────
 # HUMAN-LUMOS
 # ────────────────────────────────
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/human-lumos/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \
@@ -30,7 +33,7 @@ python -u assign_labels.py \
 # ────────────────────────────────
 # YEAST-LUMOS
 # ────────────────────────────────
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/yeast-lumos/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \
@@ -39,7 +42,7 @@ python -u assign_labels.py \
 # ────────────────────────────────
 # HUMAN-EXPLORIS
 # ────────────────────────────────
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/human-exploris/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \
@@ -48,7 +51,7 @@ python -u assign_labels.py \
 # ────────────────────────────────
 # YEAST-EXPLORIS
 # ────────────────────────────────
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/yeast-exploris/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \
@@ -57,8 +60,7 @@ python -u assign_labels.py \
 # ────────────────────────────────
 # HUMAN-PAN
 # ────────────────────────────────
-
-python -u assign_labels.py \
+bromo-assign-labels \
   --input_file "../../Datasets/preprocessing/generate_pairs/human-pan/consensus_label.txt" \
   --max_runs_majorityvoting 4 \
   --reverse_fraction 1 \

@@ -1,13 +1,12 @@
 #! /bin/bash
 
-cd /net/noble/vol3/user/ssontha2/yash_noble_rotation/reclone/2024_ssontha2_ms-targeted-dl/src
-source /net/noble/vol1/home/bwen1/tools/anaconda3/etc/profile.d/conda.sh
-conda activate /net/noble/vol1/home/bwen1/tools/anaconda3/envs/peptdeep_latest
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate bromo_env
 
 
 #################################### Training from scratch ##########################################
 # human-lumos
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/human-lumos \
     --data_out_dir ../../Datasets/finetuning/human-lumos \
     --train_file ../../Datasets/preprocessing/assign_labels/human-lumos/consensus_label_corrected.tsv \
@@ -21,7 +20,7 @@ python train.py train \
     --load_pretrained_datasets ../../Datasets/pretraining/human-astral
 
 # human-exploris
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/human-exploris \
     --data_out_dir ../../Datasets/finetuning/human-exploris \
     --train_file ../../Datasets/preprocessing/assign_labels/human-exploris/consensus_label_corrected.tsv \
@@ -36,7 +35,7 @@ python train.py train \
 
 
 # human-pan
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/human-pan \
     --data_out_dir ../../Datasets/finetuning/human-pan \
     --train_file ../../Datasets/preprocessing/assign_labels/human-pan/consensus_label_corrected.tsv \
@@ -50,7 +49,7 @@ python train.py train \
     --load_pretrained_datasets ../../Datasets/pretraining/human-astral
 
 # yeast-lumos
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/yeast-lumos \
     --data_out_dir ../../Datasets/finetuning/yeast-lumos \
     --train_file ../../Datasets/preprocessing/assign_labels/yeast-lumos/consensus_label_corrected.tsv \
@@ -64,7 +63,7 @@ python train.py train \
 
 
 # yeast-exploris
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Pretrained/bromo/yeast-exploris \
     --data_out_dir ../../Datasets/finetuning/yeast-exploris \
     --train_file ../../Datasets/preprocessing/assign_labels/yeast-exploris/consensus_label_corrected.tsv \
@@ -78,7 +77,7 @@ python train.py train \
 
 #################################### finetuning ##########################################
 # human-lumos
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Finetuned/human-lumos \
     --data_out_dir ../../Datasets/finetuning/human-lumos \
     --train_file ../../Datasets/finetuning/human-lumos/train.tsv \
@@ -93,7 +92,7 @@ python train.py train \
     --weight-decay 1e-2
 
 # human-exploris
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Finetuned/human-exploris \
     --data_out_dir ../../Datasets/finetuning/human-exploris \
     --train_file ../../Datasets/finetuning/human-exploris/train.tsv \
@@ -108,7 +107,7 @@ python train.py train \
     --weight-decay 1e-2
 
 # human-pan
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Finetuned/human-pan \
     --data_out_dir ../../Datasets/finetuning/human-pan \
     --train_file ../../Datasets/finetuning/human-pan/train.tsv \
@@ -123,7 +122,7 @@ python train.py train \
     --weight-decay 1e-2
 
 # yeast-lumos
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Finetuned/yeast-lumos \
     --data_out_dir ../../Datasets/finetuning/yeast-lumos \
     --train_file ../../Datasets/finetuning/yeast-lumos/train.tsv \
@@ -138,7 +137,7 @@ python train.py train \
     --weight-decay 1e-2
 
 # yeast-exploris
-python train.py train \
+bromo-model train \
     --model_out_dir ../../ModelCheckpoints/Finetuned/yeast-exploris \
     --data_out_dir ../../Datasets/finetuning/yeast-exploris \
     --train_file ../../Datasets/finetuning/yeast-exploris/train.tsv \

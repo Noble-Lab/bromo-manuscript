@@ -1,10 +1,9 @@
 #! /bin/bash
 
-cd /net/noble/vol3/user/ssontha2/yash_noble_rotation/reclone/2024_ssontha2_ms-targeted-dl/src
-source /net/noble/vol1/home/bwen1/tools/anaconda3/etc/profile.d/conda.sh
-conda activate /net/noble/vol1/home/bwen1/tools/anaconda3/envs/peptdeep_latest
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate bromo_env
 
-python -u subsample_runs_experiment.py \
+bromo-subsample \
     --data_file ../../Datasets/finetuning/human-pan/train.tsv \
     --sample_values 2 3 4 5 6 7 8 9 10 12 15 17 20 \
     --save_path ./fig6_human_pan.pdf \
