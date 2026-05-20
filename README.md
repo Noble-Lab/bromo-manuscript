@@ -1,4 +1,4 @@
-#### bromo-manuscript
+# bromo-manuscript
 
 ## Pipeline overview
 
