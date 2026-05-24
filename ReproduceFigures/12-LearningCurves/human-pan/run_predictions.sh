@@ -14,7 +14,6 @@ bromo-model predict \
     --max-len 30 \
     --max-charge 4 \
     --out-file ../../Datasets/learning_curve/human-pan/sample_full/bromo_val_predictions.tsv \
-    --eval_path .
 
 for seed_value in "${seed_values[@]}"; do
     # # # #0.01
@@ -23,8 +22,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.01/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.01/bromo_val_predictions.tsv 
 
 
     # # #0.025
@@ -33,8 +31,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.025/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.025/bromo_val_predictions.tsv 
 
 
     # # #0.05
@@ -43,8 +40,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.05/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.05/bromo_val_predictions.tsv 
 
 
 
@@ -54,8 +50,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.1/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.1/bromo_val_predictions.tsv 
 
     #0.25
     bromo-model predict \
@@ -63,8 +58,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.25/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.25/bromo_val_predictions.tsv 
 
     #0.5
     bromo-model predict \
@@ -72,8 +66,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.5/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.5/bromo_val_predictions.tsv 
 
     #0.6
     bromo-model predict \
@@ -81,8 +74,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.6/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.6/bromo_val_predictions.tsv 
 
 
     #0.75
@@ -91,8 +83,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.75/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.75/bromo_val_predictions.tsv 
 
 
     #0.9
@@ -101,8 +92,7 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.9/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.9/bromo_val_predictions.tsv 
 
     #0.95
     bromo-model predict \
@@ -110,6 +100,5 @@ for seed_value in "${seed_values[@]}"; do
         --test-file ../../Datasets/pretraining/human-pan/val.tsv \
         --max-len 30 \
         --max-charge 4 \
-        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.95/bromo_val_predictions.tsv \
-        --eval_path .
+        --out-file ../../Datasets/learning_curve/human-pan/${seed_value}/sample_0.95/bromo_val_predictions.tsv 
 

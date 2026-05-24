@@ -12,8 +12,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-lumos/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-lumos/trainedfromscratch/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-lumos/trainedfromscratch/testset_predictions.tsv 
 
 #finetuned
 bromo-model predict \
@@ -21,8 +20,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-lumos/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-lumos/finetuned/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-lumos/finetuned/testset_predictions.tsv 
 
 #pretrained
 bromo-model predict \
@@ -30,8 +28,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-lumos/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-lumos/pretrained/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-lumos/pretrained/testset_predictions.tsv 
 
 
 ############# human-exploris #############
@@ -41,8 +38,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-exploris/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-exploris/trainedfromscratch/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-exploris/trainedfromscratch/testset_predictions.tsv 
 
 #finetuned
 bromo-model predict \
@@ -50,8 +46,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-exploris/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-exploris/finetuned/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-exploris/finetuned/testset_predictions.tsv 
 
 #pretrained
 bromo-model predict \
@@ -59,8 +54,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-exploris/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-exploris/pretrained/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-exploris/pretrained/testset_predictions.tsv 
 
 
 ##### human-pan ######
@@ -70,8 +64,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-pan/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-pan/trainedfromscratch/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-pan/trainedfromscratch/testset_predictions.tsv 
 
 #finetuned
 bromo-model predict \
@@ -79,15 +72,14 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/human-pan/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-pan/finetuned/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/human-pan/finetuned/testset_predictions.tsv 
 
 bromo-model predict \
     --model ../../ModelCheckpoints/Pretrained/bromo/human-astral/peptide_transformer_state_step25700_best.pth \
     --test-file ../../Datasets/finetuning/human-pan/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/human-pan/pretrained/testset_predictions.tsv \
+    --out-file ../../Datasets/finetuning/human-pan/pretrained/testset_predictions.tsv 
     --eval_path .
 
 
@@ -101,8 +93,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/yeast-lumos/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/yeast-lumos/trainedfromscratch/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/yeast-lumos/trainedfromscratch/testset_predictions.tsv 
 
 #finetuned
 bromo-model predict \
@@ -110,8 +101,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/yeast-lumos/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/yeast-lumos/finetuned/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/yeast-lumos/finetuned/testset_predictions.tsv 
 
 #pretrained
 bromo-model predict \
@@ -119,8 +109,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/yeast-lumos/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/yeast-lumos/pretrained/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/yeast-lumos/pretrained/testset_predictions.tsv 
 
 
 ############# yeast-exploris #############
@@ -130,8 +119,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/yeast-exploris/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/yeast-exploris/trainedfromscratch/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/yeast-exploris/trainedfromscratch/testset_predictions.tsv 
 
 #finetuned
 bromo-model predict \
@@ -139,8 +127,7 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/yeast-exploris/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/yeast-exploris/finetuned/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/yeast-exploris/finetuned/testset_predictions.tsv 
 
 #pretrained
 bromo-model predict \
@@ -148,5 +135,4 @@ bromo-model predict \
     --test-file ../../Datasets/finetuning/yeast-exploris/test.tsv \
     --max-len 30 \
     --max-charge 4 \
-    --out-file ../../Datasets/finetuning/yeast-exploris/pretrained/testset_predictions.tsv \
-    --eval_path .
+    --out-file ../../Datasets/finetuning/yeast-exploris/pretrained/testset_predictions.tsv 
