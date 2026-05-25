@@ -80,7 +80,7 @@ Produces Figure 3 panels showing cross-instrument generalization: Bromo trained 
 
 `run_finetuning.sh` does two things:
 - Trains Bromo **from scratch** on human-lumos, human-exploris, human-pan, yeast-lumos, and yeast-exploris
-- Fine-tunes the human-astral pretrained model on human datasets, and the yeast-astral pretrained model on yeast datasets (5 epochs, lr 1e-5)
+- Fine-tunes the human-astral pretrained model on these datasets (5 epochs, lr 1e-5).
 
 `run_inference.sh` then runs all three conditions (pretrained, trained-from-scratch, finetuned) on each dataset's held-out test set.
 
