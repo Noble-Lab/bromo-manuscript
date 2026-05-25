@@ -23,7 +23,7 @@ The seven dataset configurations used throughout are:
 | human-astral | Human | Astral |
 | human-exploris | Human | Exploris |
 | human-lumos | Human | Lumos |
-| human-pan | Human | Pan-cancer cell lines (ProCan-DepMapSanger) |
+| human-pan | Human | TripleTOF (ProCan-DepMapSanger) |
 | yeast-astral | Yeast | Astral |
 | yeast-exploris | Yeast | Exploris |
 | yeast-lumos | Yeast | Lumos |
