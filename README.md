@@ -7,6 +7,8 @@ Code to reproduce all figures from the Bromo manuscript. Bromo is a transformer-
 - Conda environment: `bromo_env` (contains the `bromo-model`, `bromo-xgboost`, `bromo-assign-labels`, and `bromo-subsample` CLI tools)
 - `carafe-rank-1.0.0.jar` (used in step 01)
 
+To reproduce all the analysis and figures, you will need to pip install the bromo package. Instrucrtions for this are in the main bromo repo [https://github.com/Noble-Lab/bromo].
+
 ## Data and model checkpoints
 
 All datasets and pretrained/finetuned model checkpoints are available on Zenodo:
