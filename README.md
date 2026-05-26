@@ -114,3 +114,9 @@ Runs `bromo-subsample` on the human-pan training set across 13 sample sizes (2â€
 ## Citation
 
 If you use this code, please cite the accompanying manuscript.
+
+
+Prioritizing peptides for targeted mass spectrometry experiments using deep learning
+Shreyash Sonthalia, Priank Dasgupta, Chris Hsu, Bo Wen, Michael J. MacCoss, William Stafford Noble
+bioRxiv 2026.05.21.727053; doi: https://doi.org/10.64898/2026.05.21.727053
+
