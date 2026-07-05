@@ -8,4 +8,5 @@ bromo-subsample \
     --sample_values 2 3 4 5 6 7 8 9 10 12 15 17 20 \
     --save_path ./fig6_human_pan.pdf \
     --max_runs_majorityvoting 4 \
-    --alpha 0.05
+    --alpha 0.05 \
+    --seed 42
