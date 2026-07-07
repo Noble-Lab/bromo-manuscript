@@ -1,8 +1,10 @@
 #! /bin/bash
 
 source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate bromo_env
+conda activate bromoenv
 export PYTHONUNBUFFERED=1
+
+cd /net/noble/vol3/user/ssontha2/yash_noble_rotation/bromo-manuscript/ReproduceFigures/04-TrainXGBoostBaselineAndRunInference
 
 ##################################### Train xgboost baseline #########################################################
 # #### HUMAN-ASTRAL dataset ####
@@ -14,6 +16,7 @@ bromo-xgboost train \
     --add_terminal \
     --tune \
     --n_trials 10
+
 
 ################################### Run Inference on test sets ###################################
 # ## HUMAN-ASTRAL test set ######
