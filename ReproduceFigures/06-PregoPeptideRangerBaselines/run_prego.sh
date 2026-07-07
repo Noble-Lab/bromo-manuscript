@@ -1,2 +1,0 @@
-./classify -f ../../Datasets/proteome_fastas/human/UP000005640_9606.fasta > ../../Datasets/external_baselines/human/prego/prego_output_UP000005640_9606.txt
-./classify -f ../../Datasets/proteome_fastas/yeast/UP000002311_559292.fasta > ../../Datasets/external_baselines/yeast/prego/prego_output_UP000002311_559292.txt
