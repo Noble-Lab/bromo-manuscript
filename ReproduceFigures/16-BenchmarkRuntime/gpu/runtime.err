@@ -1,0 +1,6 @@
+
+EnvironmentNameNotFound: Could not find conda environment: bromo_env
+You can list all discoverable environments with `conda info --envs`.
+
+
+/var/spool/uge/pinglay001/job_scripts/22221958: line 8: bromo-benchmark: command not found
