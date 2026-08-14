@@ -1,6 +1,9 @@
+#!/bin/bash
 
 source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate bromo_env
+conda activate bromoenv
+
+cd /net/noble/vol3/user/ssontha2/yash_noble_rotation/bromo-manuscript/ReproduceFigures/16-BenchmarkRuntime/gpu
 
 bromo-benchmark \
     --pairs_file ../../../Datasets/pretraining/human-astral/test.tsv \
