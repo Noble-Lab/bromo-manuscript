@@ -1,48 +1,26 @@
 Device: cuda
 Loaded 7,486,880 pairs from ../../../Datasets/pretraining/human-astral/test.tsv
+Benchmarking at sizes: [374344, 748688, 1871720, 3743440, 5615160, 6738192, 7486880]
 Loaded Bromo model
 Loaded XGBoost model
-Benchmarking at sizes: [100, 496, 2469, 12273, 60997, 303140, 1506510, 7486880]
-  Bromo  n=   100  median=0.004s
-  XGBoost n=   100  median=0.003s
-  Bromo  n=   496  median=0.014s
-  XGBoost n=   496  median=0.009s
-  Bromo  n= 2,469  median=0.083s
-  XGBoost n= 2,469  median=0.035s
-  Bromo  n=12,273  median=0.386s
-  XGBoost n=12,273  median=0.272s
-  Bromo  n=60,997  median=1.582s
-  XGBoost n=60,997  median=1.346s
-  Bromo  n=303,140  median=7.700s
-  XGBoost n=303,140  median=7.183s
-  Bromo  n=1,506,510  median=39.502s
-  XGBoost n=1,506,510  median=37.606s
-  Bromo  n=7,486,880  median=205.000s
-  XGBoost n=7,486,880  median=191.198s
+  Bromo  n= 374,344 (  5.0%)  time=8.647s  GPU=0.90GB  CPU=0.25GB
+  XGBoost n= 374,344 (  5.0%)  time=7.947s
+  Bromo  n= 748,688 ( 10.0%)  time=17.380s  GPU=0.90GB  CPU=0.00GB
+  XGBoost n= 748,688 ( 10.0%)  time=16.966s
+  Bromo  n=1,871,720 ( 25.0%)  time=45.342s  GPU=0.90GB  CPU=0.00GB
+  XGBoost n=1,871,720 ( 25.0%)  time=47.484s
+  Bromo  n=3,743,440 ( 50.0%)  time=95.357s  GPU=0.90GB  CPU=0.00GB
+  XGBoost n=3,743,440 ( 50.0%)  time=95.512s
+  Bromo  n=5,615,160 ( 75.0%)  time=146.494s  GPU=0.90GB  CPU=0.00GB
+  XGBoost n=5,615,160 ( 75.0%)  time=149.151s
+  Bromo  n=6,738,192 ( 90.0%)  time=178.072s  GPU=0.90GB  CPU=0.00GB
+  XGBoost n=6,738,192 ( 90.0%)  time=183.212s
+  Bromo  n=7,486,880 (100.0%)  time=200.625s  GPU=0.90GB  CPU=0.00GB
+  XGBoost n=7,486,880 (100.0%)  time=203.090s
 
 Saved results → ./benchmark_results/runtime_results.tsv
-Saved plot     → ./benchmark_results/runtime_plot.pdf
-Device: cuda
-Loaded 7,486,880 pairs from ../../../Datasets/pretraining/human-astral/test.tsv
-Loaded Bromo model
-Loaded XGBoost model
-Benchmarking at sizes: [100, 496, 2469, 12273, 60997, 303140, 1506510, 7486880]
-  Bromo  n=   100  median=0.004s
-  XGBoost n=   100  median=0.004s
-  Bromo  n=   496  median=0.015s
-  XGBoost n=   496  median=0.009s
-  Bromo  n= 2,469  median=0.082s
-  XGBoost n= 2,469  median=0.036s
-  Bromo  n=12,273  median=0.395s
-  XGBoost n=12,273  median=0.269s
-  Bromo  n=60,997  median=1.597s
-  XGBoost n=60,997  median=1.363s
-  Bromo  n=303,140  median=7.877s
-  XGBoost n=303,140  median=7.244s
-  Bromo  n=1,506,510  median=39.656s
-  XGBoost n=1,506,510  median=39.264s
-  Bromo  n=7,486,880  median=219.485s
-  XGBoost n=7,486,880  median=198.208s
 
-Saved results → ./benchmark_results/runtime_results.tsv
+── Peak memory (across all sizes) ───────────────
+  Max GPU memory: 0.905 GB
+  Max CPU memory: 0.253 GB
 Saved plot     → ./benchmark_results/runtime_plot.pdf
