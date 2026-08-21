@@ -59,24 +59,35 @@ Trains an XGBoost baseline on human-astral and runs inference across all dataset
 
 Produces panels 2a (Astral), 2b (Exploris), 2c (Lumos) comparing Bromo predictions on held-out human test sets.
 
-### Step 07 — Plot Figure 2DEF
-**`ReproduceFigures/07-PlotFigure2DEF/fig2def_builder.ipynb`**
+### Step 06 — Plot Supplement Figure 1
+**`ReproduceFigures/06-PlotSuppFig1/suppfig1_builder.ipynb`**
+
+Produces panels S1a (Astral), S1b (Exploris), S1c (Lumos), which plots TKA at k=3 as a function of # of peptides per protein.
+
+### Step 07 — Prego and PeptideRanger baselines
+**`ReproduceFigures/07-PregoPeptideRangerBaselines/run_prego.sh`** 
+**`ReproduceFigures/07-PregoPeptideRangerBaselines/run_peptideranger.R`**
+
+Runs Prego and PeptideRanger baselines on various datasets. 
+
+### Step 08 — Plot Figure 2DEF
+**`ReproduceFigures/08-PlotFigure2DEF/fig2def_builder.ipynb`**
 
 Produces panels 2d–2f showing max-peptide detectability analysis across instruments.
 
-### Step 08 — Plot Figure 2GHI
-**`ReproduceFigures/08-PlotFigure2GHI/figure2ghi_builder.ipynb`**
+### Step 09 — Plot Figure 2GHI
+**`ReproduceFigures/09-PlotFigure2GHI/figure2ghi_builder.ipynb`**
 
 Produces panels 2g (Bromo), 2h (PREGO), 2i (PeptideRanger), benchmarking Bromo against existing tools.
 
-### Step 09 — Plot Figure 3
-**`ReproduceFigures/09-PlotFigure3/fig3_builder.ipynb`**
+### Step 10 — Plot Figure 3
+**`ReproduceFigures/10-PlotFigure3/fig3_builder.ipynb`**
 
 Produces Figure 3 panels showing cross-instrument generalization: Bromo trained on one instrument evaluated on others (Exploris, Lumos, Astral, pan-cancer).
 
-### Step 10 — Fine-tune Bromo and run inference
-**`ReproduceFigures/10-RunFinetuning/run_finetuning.sh`**
-**`ReproduceFigures/10-RunFinetuning/run_inference.sh`**
+### Step 11 — Fine-tune Bromo and run inference
+**`ReproduceFigures/11-RunFinetuning/run_finetuning.sh`**
+**`ReproduceFigures/11-RunFinetuning/run_inference.sh`**
 
 `run_finetuning.sh` does two things:
 - Trains Bromo **from scratch** on human-lumos, human-exploris, human-pan, yeast-lumos, and yeast-exploris
@@ -84,14 +95,14 @@ Produces Figure 3 panels showing cross-instrument generalization: Bromo trained 
 
 `run_inference.sh` then runs all three conditions (pretrained, trained-from-scratch, finetuned) on each dataset's held-out test set.
 
-### Step 11 — Plot Figure 4
-**`ReproduceFigures/11-PlotFigure4/fig4_builder.ipynb`**
+### Step 12 — Plot Figure 4
+**`ReproduceFigures/12-PlotFigure4/fig4_builder.ipynb`**
 
 Produces Figure 4 comparing pretrained, trained-from-scratch, and finetuned Bromo across human and yeast datasets on multiple instruments.
 
-### Step 12 — Learning curves
-**`ReproduceFigures/12-LearningCurves/human-astral/`**
-**`ReproduceFigures/12-LearningCurves/human-pan/`**
+### Step 13 — Learning curves
+**`ReproduceFigures/13-LearningCurves/human-astral/`**
+**`ReproduceFigures/13-LearningCurves/human-pan/`**
 
 Each directory contains scripts to:
 1. Train Bromo at 10 data fractions (1%–95%) with 5 random seeds (`run_training_learningcurve.sh`)
@@ -99,16 +110,20 @@ Each directory contains scripts to:
 3. Train and run XGBoost at each fraction for comparison (`run_xgboost.sh`, `run_predictions_xgboost.sh`)
 4. Run TKA baseline (`run_tka.sh`)
 
-### Step 13 — Plot Figure 5
-**`ReproduceFigures/13-PlotFigure5/fig5_builder.ipynb`**
+### Step 14 — Plot Figure 5
+**`ReproduceFigures/14-PlotFigure5/fig5_builder.ipynb`**
 
 Produces Figure 5 learning curve plots for human-astral and human-pan.
 
-### Step 14 — Run subsampling and plot Figure 6
-**`ReproduceFigures/14-RunSubsamplingAndPlotFigure6/run_subsample_runs.sh`**
+### Step 15 — Run subsampling and plot supplementary Figure 6
+**`ReproduceFigures/15-RunSubsamplingAndPlotSuppFig2/run_subsample_runs.sh`**
 
-Runs `bromo-subsample` on the human-pan training set across 13 sample sizes (2–20 runs) to quantify the effect of the number of LC-MS/MS runs on label quality. Produces `fig6_human_pan.pdf` directly.
+Runs `bromo-subsample` on the human-pan training set across 13 sample sizes (2–20 runs) to quantify the effect of the number of LC-MS/MS runs on label quality. Produces `suppfig2_human_pan.pdf` directly.
 
+### Step 16 — Benchmark runtime and GPU/CPU usage
+**`ReproduceFigures/16-BenchmarkRuntime/gpu/run_runtime_benchmark.sh`**
+
+Runs inference on various subsampled dataset sizes and plots runtime and reports maximum GPU and CPU memory usage.
 ---
 
 ## Citation
