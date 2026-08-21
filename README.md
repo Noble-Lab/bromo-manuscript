@@ -12,7 +12,7 @@ To reproduce all the analysis and figures, you will need to pip install the brom
 ## Data and model checkpoints
 
 All datasets and pretrained/finetuned model checkpoints are available on Zenodo:
-https://zenodo.org/records/20367457
+https://zenodo.org/records/21940143
 
 Download and place them under `Datasets/` and `ModelCheckpoints/` respectively. See [`Datasets/readme.md`](Datasets/readme.md) and [`ModelCheckpoints/readme.md`](ModelCheckpoints/readme.md) for details.
 
