@@ -124,6 +124,7 @@ Runs `bromo-subsample` on the human-pan training set across 13 sample sizes (2â€
 **`ReproduceFigures/16-BenchmarkRuntime/gpu/run_runtime_benchmark.sh`**
 
 Runs inference on various subsampled dataset sizes and plots runtime and reports maximum GPU and CPU memory usage.
+
 ---
 
 ## Citation
