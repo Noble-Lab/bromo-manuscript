@@ -1,0 +1,12 @@
+{
+  "vocab_size": 22,
+  "d_model": 256,
+  "nhead": 8,
+  "num_layers": 4,
+  "dim_feedforward": 512,
+  "max_len": 30,
+  "max_charge": 4,
+  "charge_emb_dim": 16,
+  "hidden_dim": 128,
+  "dropout": 0.15579754426081674
+}
